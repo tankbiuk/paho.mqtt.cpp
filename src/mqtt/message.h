@@ -118,6 +118,16 @@ public:
 	 */
 	std::string get_payload() const;
 	/**
+	 * Gets the payload size (in bytes)
+	 */
+	int get_payload_size();
+	/**
+	 * Gets the pointer to the payload,
+	 * This function can be used in conjunction with get_payload_size()
+	 * to retrieve (and eventually copy) the binary payload
+	 */
+	void* get_payload_ptr();
+	/**
 	 * Returns the quality of service for this message.
 	 * @return The quality of service for this message.
 	 */

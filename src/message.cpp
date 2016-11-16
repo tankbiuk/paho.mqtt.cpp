@@ -116,6 +116,16 @@ std::string message::get_payload() const
 	return std::string(p, p+msg_.payloadlen);
 }
 
+int message::get_payload_size()
+{
+	return msg_.payloadlen;
+}
+
+void* message::get_payload_ptr()
+{
+	return msg_.payload;
+}
+
 void message::set_payload(const void* payload, size_t len)
 {
 	delete[] (char*) msg_.payload;
